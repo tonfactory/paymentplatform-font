@@ -5,11 +5,10 @@ import {
   CircularProgress,
   CircularProgressProps,
 } from '@mui/material'
-import { StateLoader } from 'features/loader'
 
 interface Props extends Omit<BackdropProps, 'open'> {
   size?: CircularProgressProps['size']
-  loader?: Pick<StateLoader, 'isOpen'>
+  loader?: any
   open?: boolean
 }
 

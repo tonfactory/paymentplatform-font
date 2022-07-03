@@ -1,9 +1,9 @@
 import { Observer, observer } from 'mobx-react-lite'
 import { styled, Stack, StackProps } from '@mui/material'
-import { StateNumbers as N } from 'features/numbers'
+// import { StateNumbers as N } from '..//numbers'
 
 interface NumbersProps extends StackProps {
-  numbers: N
+  numbers: any
 }
 
 const Num = styled('input')(({ theme }) => ({
@@ -24,7 +24,7 @@ const Num = styled('input')(({ theme }) => ({
 
 export const Numbers = observer<NumbersProps>(({ numbers, ...props }) => (
   <Stack direction={'row'} gap={1} m="auto" {...props}>
-    {numbers.array.map((n) => (
+    {numbers.array.map((n: any) => (
       <Observer key={n.key}>
         {() => <Num {...n} data-valid={numbers.valid} />}
       </Observer>

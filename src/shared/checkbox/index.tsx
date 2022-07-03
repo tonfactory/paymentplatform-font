@@ -1,9 +1,9 @@
 import { observer } from 'mobx-react-lite'
 import * as Mui from '@mui/material'
-import { StateCheckbox } from 'features/checkbox'
+// import { StateCheckbox } from 'features/checkbox'
 
 interface Props {
-  checkbox: StateCheckbox
+  checkbox: any
   loading?: boolean
 }
 
